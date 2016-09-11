@@ -1,0 +1,68 @@
+<div id="rodape"
+     i18n:domain="plone">
+
+
+     <div class="login"
+             tal:define="ac_name view/login_name;
+                    ac_password view/login_password">
+
+
+        <br />
+        <br />
+        <form action="login_form"
+              name="loginform"
+              method="post"
+              tal:attributes="action view/login_form">
+
+            <input type="hidden" name="form.submitted" value="1" />
+            <input type="hidden" name="came_from" value="" 
+              tal:attributes="value context/@@plone_context_state/current_page_url" />
+            <input type="hidden" name="js_enabled" id="js_enabled" value="0" />
+            <input type="hidden" name="cookies_enabled" id="cookies_enabled" value="" />
+            <input type="hidden" name="login_name" id="login_name" value="" />
+            <input type="hidden" name="pwd_empty" id="pwd_empty" value="0" />
+
+                <label for=""
+                       tal:attributes="for ac_name">
+                       Usuário
+                       </label>
+                <br />
+                <input type="text"
+                       size="15"
+                       alt="Login Name"
+                       tal:attributes="name ac_name; id ac_name;
+                                       value python:request.get(ac_name, '');"
+                       i18n:attributes="alt label_login_name;"/>
+            
+                <br />
+
+                <label for=""
+                       tal:attributes="for ac_password">Senha</label>
+                <br />
+                <input type="password"
+                       size="15"
+                       alt="Password"
+                       tal:attributes="name ac_password; id ac_password;"
+                       i18n:attributes="alt label_password;"/>
+
+                <br />
+                <br />                
+                <input type="submit"
+                       name="submit"
+                       value="Log in"
+                       alt="Log in" />
+
+        </form>
+
+     </div>
+
+     <div class="endereco">
+        Exata Opinião Pública<br />
+        Fone/Fax: (61) 3034 5635<br />
+        SRTVS 701 - Bloco II - Sala 418<br />
+        Edifício Assis Chateaubriand<br />
+        Brasília - DF
+     </div>
+
+     
+</div>

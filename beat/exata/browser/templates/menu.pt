@@ -1,0 +1,38 @@
+<div id="cabecalho"
+     i18n:domain="plone">
+
+     <div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
+
+     <div id="marca">
+         <a href="" tal:attributes="href string:${view/navigation_root_url}/">
+             <img src="" tal:attributes="src string:${view/navigation_root_url}/logo.jpg">
+         </a>
+     </div>
+     <ul id="menu"
+          tal:define="view context/@@navigation_view;
+                      root view/navigationRoot;
+                      itens python:root.getMenuItens()">
+        <tal:rep repeat="item itens">
+            <li tal:attributes="class string:bg${repeat/item/index}">
+                <a href="" tal:content="python:item['title']" 
+                           tal:attributes="href python:item['url']"/>
+                <ul id="submenu"
+                    tal:define="sub python:item['sub']">
+                    <tal:rep repeat="subitem sub">
+                        <li>
+                            <a href="" tal:content="python:subitem['title']" 
+                               tal:attributes="href python:subitem['url']"/>
+                        </li>
+                    </tal:rep>
+                </ul>
+            </li>
+        </tal:rep>
+    </ul>
+
+    <div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
+
+</div>
+
+
+
+

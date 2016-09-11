@@ -1,0 +1,31 @@
+<div id="busca"
+     i18n:domain="plone">
+    <form name="searchform"
+          action="search"
+          id="caixaBusca"
+          tal:attributes="action string:${view/navigation_root_url}/search">
+
+        <div class="LSBox">
+
+        <input name="SearchableText"
+               type="text"
+               size="20"
+               value=""
+               title="Search Site"
+               accesskey="4"
+               i18n:attributes="title title_search_site;"
+               tal:attributes="value request/SearchableText|nothing;
+                               id view/search_input_id"
+               class="inputLabel" />
+
+        <input id="searchButton"
+               type="button"
+               border="0"
+               value="Search"
+               i18n:attributes="value label_search;" />
+                                
+        <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
+        </div>
+    </form>
+
+</div>

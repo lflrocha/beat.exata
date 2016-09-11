@@ -1,0 +1,65 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="beat.exata">
+
+  <!-- 'Exata OP' Zope 3 browser layer -->
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="Exata OP"
+      />
+  
+  <!-- Viewlets registration -->
+  <!-- Zope 3 browser resources -->
+
+  <!-- Resource directory for images -->
+  <browser:resourceDirectory
+      name="beat.exata.images"
+      directory="images"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- Resource directory for stylesheets -->
+  <browser:resourceDirectory
+      name="beat.exata.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+
+  <browser:viewlet
+      name="exata.menu"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".viewlets.MenuViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View" 
+      />
+
+  <browser:viewlet
+      name="exata.rodape"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".viewlets.RodapeViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View" 
+      />
+
+  <browser:viewlet
+      name="exata.searchbox"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class=".viewlets.SearchBoxViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View" 
+      />
+
+    <!-- The breadcrumbs -->
+  <browser:viewlet
+      name="exata.path_bar"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class=".viewlets.PathBarViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View"
+      />
+
+
+</configure>

@@ -1,0 +1,140 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+
+body {
+    margin: 0 auto;
+}
+
+
+
+#portal-column-one {
+width:430px;
+background: url("&dtml-portal_url;/fundoColuna.jpg") repeat-y 50px 0px;
+}
+
+#portal-column-one .visualPadding {
+padding:0 20px 0 71px;
+}
+
+#portal-column-content {
+  min-height: 350px;
+  _height: auto !important;
+  height: 350px;
+  margin: 0;
+  padding: 10px 10px 10px 0;
+}
+
+#portal-breadcrumbs {
+border-bottom: 0px;
+line-height:1.6em;
+padding-left:0px;
+padding-right:2em;
+text-transform:lowercase;
+margin-top: -10px;
+padding-bottom: 30px;
+}
+
+
+#busca {
+    height: 50px;
+    width: 100%;
+    background: url("&dtml-portal_url;/fundoColuna.jpg") repeat-y 50px 0px;
+}
+
+#busca form {
+    float: right;
+    margin-right: 200px;    
+    padding-top: 20px;
+}
+
+#cabecalho {
+    background: #1D2855;
+}
+
+#marca {
+    float: left;
+    margin-left: 50px;
+    padding-left: 21px;
+}
+
+#menu {    
+    float: left;
+    height: 115px;
+    margin: 0px;    
+    background-color: transparent;
+    white-space: nowrap;
+    list-style-image: none;
+    list-style-type: none;
+}
+
+#menu li {
+    float: left;
+    height: 95px;
+    width: 120px;
+    padding: 10px;
+    display: inline;
+}
+
+.bg0 {
+    background-color: #87B4B9;
+}
+
+.bg1 {
+    background-color: #0599B4;
+}
+
+.bg2 {
+    background-color: #051E8A;
+}
+
+.bg3 {
+    background-color: #1D2855;
+}
+
+#menu li a {
+    text-decoration: none;
+    text-transform:uppercase;
+    font-size:14px;
+    color: white;
+}
+
+#menu li ul {
+    margin-top: 5px;
+}
+
+#menu li ul li {
+    height: 13px;
+    padding: 0px;
+}
+
+#menu li ul li a{
+    font-size:12px;
+    text-transform:none;
+    color: white;
+}
+
+
+#rodape {
+    width: 100%;
+    height: 140px;
+    background: url("&dtml-portal_url;/fundoRodape.jpg") repeat-y 52px 0px;    
+    background-color: #E6E7E8;
+    border-top: 2px solid #F7F7F7;
+}
+
+#rodape .login {
+    width: 200px;
+    height: 140px;
+    float: right;
+    margin-right: 200px;
+}
+
+#rodape .endereco {
+    width: 240px;
+    height: 120px;
+    margin-left: 500px;
+    padding-top: 30px;
+    font-weight: bold;
+}
+/* </dtml-with> */
